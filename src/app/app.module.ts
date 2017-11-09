@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ImcPageModule } from '../pages/imc/imc.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    FeedPageModule
+    FeedPageModule,
+    ImcPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

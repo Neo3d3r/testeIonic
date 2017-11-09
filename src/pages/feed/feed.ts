@@ -7,8 +7,13 @@ import { NavController } from 'ionic-angular';
 })
 export class FeedPage {
 
+	public nome_usuario:string = "Ederson C. Menezes";
+
   constructor(public navCtrl: NavController) {
   }
+somarnumeros(): number{
 
+  return;
+}
 
 }
