@@ -22,14 +22,16 @@
 
         <ion-item>
             <ion-label floating>Entre com sua altura</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="num1"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Entre com seu peso</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="num2"></ion-input>
         </ion-item>
-        <button ion-button round>Calcular</button>
+        <button ion-button round (click)="calculo_Imc()">Calcular</button>
     </ion-list>
+    <h3>Resultado: {{result}}</h3>
+    <h3>Você é considerado: {{saude}}</h3>
 
 </ion-content>
