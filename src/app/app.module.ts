@@ -12,6 +12,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ImcPageModule } from '../pages/imc/imc.module';
+import { HttpModule } from '@angular/http';
+import { FilmeProvider } from '../providers/filme/filme';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ImcPageModule } from '../pages/imc/imc.module';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     FeedPageModule,
-    ImcPageModule
+    ImcPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,7 +41,8 @@ import { ImcPageModule } from '../pages/imc/imc.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FilmeProvider
   ]
 })
 export class AppModule {}
